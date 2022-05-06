@@ -1,5 +1,5 @@
 Para usar o CRA:
-    Passos iniciais np terminal:
+    Passos iniciais n terminal:
         npx create-react-app my-app
         cd my-app
         npm start //Abre o projeto
@@ -10,3 +10,5 @@ Para usar o Vite:
         cd react-vite
         npm install
         npm run dev //Abre o projeto
+
+OBS: Use o Vite 
