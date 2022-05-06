@@ -1,20 +1,20 @@
-import React from 'react'
+import {Header} from './components/Header'
+import {Photo} from './components/Photo'
 
-const Header = () => {
-  return (
-    <header>
-      <h1>Titulo da pagima</h1>
-      <hr />
-    </header>
-
-  )
-}
 
 const App =() => {
   return (
     <div>
-      <header />
+      <Header
+        title = 'este é um exemplo'
+      />
+      <Header title = 'Outro texto'/>
+      
       Olá mundo.
+
+      <Photo legend='Google'>
+        <img src="http://www.google.com.br/google.jpg" alt="" />
+      </Photo> 
     </div>
   )
 }
