@@ -9,8 +9,8 @@ type Props = {
 export const Photo = ({children, legend}: Props) => {
     return (
        <>
-           {children}
            <p>{legend}</p>
+           {children}
        </> 
     )
 }

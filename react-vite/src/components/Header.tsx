@@ -5,8 +5,9 @@ type Props = {
 export const Header = ({title}: Props) => {
     return (
       <header>
-        <h1>{title}</h1>
         <hr />
+        <h1>{title}</h1>
+        
       </header>
   
     )
