@@ -1,9 +1,10 @@
 import {Header} from './components/Header'
 import {Photo} from './components/Photo'
+import { Botao } from "./components/Botao";
+import {Pessoa } from "./components/Pessoa";
 
 //Import para a aula State
 import React, {useState} from 'react'
-
 
 const App =() => {
   
@@ -35,6 +36,28 @@ const App =() => {
 
   const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName02( event.target.value )
+  }
+
+  //Comunicação entre componentes
+  let textoDoBotao = 'Clicar no botão'
+
+  const botaoEventAction = (txt: string) => {
+    alert('Frase do APP' + txt)
+  }
+
+  //Renderizar Listas
+  let list = [
+    {name: 'Bonieky', age: 20},
+    {name: 'Pedro', age: 50},
+    {name: 'Samanta', age: 15},
+    {name: 'Maria', age: 75}
+  ]
+
+  //Renderizando o conteúdo condcioanl
+  const [show, setshow] = useState(false)
+
+  const handleClick02 = () => {
+    setshow( !show )
   }
 
   
@@ -70,6 +93,32 @@ const App =() => {
         <input type="text" value={name02} onChange={handleInput}/>
         Seu nome é {name02}
 
+
+      <Header
+        title='Comunicação entre componentes'></Header>
+      <Botao text={textoDoBotao} clickFn={botaoEventAction} ></Botao>
+
+      <Header
+        title='Renderizar listas'></Header>
+
+        <h2>Lista de presença</h2>
+        <ul>
+          {list.map((item, index) => (
+            //<li key={index} >{ item.name} - {item.age}</li>
+            //Lista do componente
+            <Pessoa key={index} data={item}></Pessoa>
+          ))}
+        </ul>
+
+      <Header 
+        title='Renderizando o conteúdo condcioanl'></Header>
+      <button onClick={handleClick02}>{show ? 'Ocultar' : 'Mostrar'}</button>
+
+      {show && 
+      <div>
+        Bla Bla Bla...
+      </div>
+      }
     </div>
   )
 }
