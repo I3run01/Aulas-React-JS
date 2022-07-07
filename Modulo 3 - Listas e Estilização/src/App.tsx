@@ -1,5 +1,6 @@
-import { Header } from "./components/Header"
 import { useState } from "react"
+import { Header } from "./components/Header"
+import { Botao } from "./components/Botao"
 
 const App =() => {
 
@@ -40,9 +41,7 @@ const App =() => {
 
         <Header 
           title="Estilizando com StyleShhet"></Header>
-          
-      
-
+          <Botao />
 
     </div>
     
