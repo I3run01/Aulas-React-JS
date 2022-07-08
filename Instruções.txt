@@ -11,4 +11,8 @@ Para usar o Vite:
         npm install
         npm run dev //Abre o projeto
 
+Bibliotecas
+	Biblioteca para styles components
+		npm install styled-components -D @types/styled-components
+
 OBS: Use o Vite 
