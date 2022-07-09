@@ -1,4 +1,4 @@
-import * as C from './AppAtyles'
+import * as C from './AppStyles'
 
 const App =() => {
   return (
