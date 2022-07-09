@@ -14,5 +14,7 @@ Para usar o Vite:
 Bibliotecas
 	Biblioteca para styles components
 		npm install styled-components -D @types/styled-components
+	Baixe e instale a seguinte extensão para ter o auto-complete
+		vscode-styled-components
 
 OBS: Use o Vite 
