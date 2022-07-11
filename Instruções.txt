@@ -14,7 +14,39 @@ Para usar o Vite:
 Bibliotecas
 	Biblioteca para styles components
 		npm install styled-components -D @types/styled-components
+
 	Baixe e instale a seguinte extensão para ter o auto-complete
 		vscode-styled-components
 
-OBS: Use o Vite 
+Instalar tailwind:
+	npm install -D tailwindcss postcss autoprefixer
+	npx tailwindcss init -p
+	
+	Configuração de Tailwind.config.js
+		module.exports = {
+  			content: [
+    				"./index.html",
+    				"./src/**/*.{vue,js,ts,jsx,tsx}",
+  				],
+  			theme: {
+    			extend: {},
+  			},
+  			plugins: [],
+		}
+	Instale a extensão 
+		PostCSS Language Support
+	
+	Imports NI index.css
+		@tailwind base;
+		@tailwind components;
+		@tailwind utilities;
+
+
+
+
+
+----------------------
+OBS: Use o Vite
+
+Para rodar o servidor:
+	npm run dev
