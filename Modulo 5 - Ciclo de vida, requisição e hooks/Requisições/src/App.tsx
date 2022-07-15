@@ -1,30 +1,40 @@
-import { ChangeEvent, useEffect, useState } from "react"
+import { useState, useEffect } from "react"
+import { Movie } from './types/Movies'
 
 const App =() => {
-  const [name, setName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [fullName, setFullName] = useState('')
+  const [movies, setMovies] = useState<Movie[]>([])
 
   useEffect(() => {
-    setFullName(`${name} ${lastName}`)
-  }), [name, lastName]
+    loadMovies
+  }),[]
 
-  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setName( e.target.value )
+  const loadMovies = () => {
+    fetch('https://api.b7web.com.br/cinema/')
+      .then((response) => {
+        return response.json()
+      })
+      .then((json) => {
+        setMovies(json)
+      })
   }
-
-  const handleLastNameChange = (e:ChangeEvent<HTMLInputElement>) => {
-    setLastName( e.target.value )
-  }
-
+ 
   return (
-    <div >
-      <input type="text" placeholder="Digite o seu nome" value={name} onChange={handleNameChange}/> <br />
-      <input type="text" placeholder="Digite o seu sobrenome" value={lastName} onChange={handleLastNameChange} /> <br />
-      Nome Completo: {fullName} 
-    </div>
-
+    <div>
+        <button onClick={loadMovies}>Carregar Filmes</button> <br />
+        
+        Total de filmes: {movies.length}
+        <div>
+          { movies.map((item, index) => (
+            <div key={index}>
+              <img src={item.avatar}/>
+              {item.titulo}
+            </div>
+          ))}
+        </div>
+      </div>
   )
 }
 
 export default App
+
+//https://api.b7web.com.br/cinema/
