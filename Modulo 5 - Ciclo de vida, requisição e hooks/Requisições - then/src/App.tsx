@@ -5,16 +5,19 @@ const App =() => {
   const [movies, setMovies] = useState<Movie[]>([])
 
   useEffect(() => {
-    loadMovies
-  }),[]
+    loadMovies()
+  }, [])
 
   const loadMovies = () => {
-    fetch('https://api.b7web.com.br/cinema/')
+    fetch('https://api.b7web.com.br/cinema')
       .then((response) => {
         return response.json()
       })
       .then((json) => {
         setMovies(json)
+      })
+      .catch((e) => {
+        alert('Ocorreu um erro')
       })
   }
  
