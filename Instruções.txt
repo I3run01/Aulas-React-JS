@@ -18,28 +18,32 @@ Bibliotecas
 	Baixe e instale a seguinte extensão para ter o auto-complete
 		vscode-styled-components
 
-Instalar tailwind:
-	npm install -D tailwindcss postcss autoprefixer
-	npx tailwindcss init -p
+	Instalar tailwind:
+		npm install -D tailwindcss postcss autoprefixer
+		npx tailwindcss init -p
 	
-	Configuração de Tailwind.config.js
-		module.exports = {
-  			content: [
-    				"./index.html",
-    				"./src/**/*.{vue,js,ts,jsx,tsx}",
-  				],
-  			theme: {
-    			extend: {},
-  			},
-  			plugins: [],
-		}
-	Instale a extensão 
-		PostCSS Language Support
+		Configuração de Tailwind.config.js
+			module.exports = {
+  				content: [
+    					"./index.html",
+    					"./src/**/*.					{vue,js,ts,jsx,tsx}",
+  					],
+  				theme: {
+    				extend: {},
+  				},
+  				plugins: [],
+			}
+		Instale a extensão 
+			PostCSS Language Support
 	
-	Imports NI index.css
-		@tailwind base;
-		@tailwind components;
-		@tailwind utilities;
+		Imports NI index.css
+			@tailwind base;
+			@tailwind components;
+			@tailwind utilities;
+	
+	Instalar a Biclioteca Axios -> Para realizar requisições
+		npm install axios
+
 
 
 

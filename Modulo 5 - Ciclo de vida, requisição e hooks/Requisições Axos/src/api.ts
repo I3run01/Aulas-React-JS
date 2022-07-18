@@ -1,19 +1,19 @@
-const BASE = 'https://jsonplaceholder.typicode.com'
+import axios from "axios"
+
+const http = axios.create({
+    baseURL: 'https://jsonplaceholder.typicode.com'
+})
 
 export const api = {
     getAllPosts: async () => {
-        let response = await fetch(`${BASE}/posts`)
-        let json = await response.json()
-
-        return json
+        let response = await http.get('/posts')
+        return response.data
     },
     addNewPost: async (title: string, body: string, userid: number) => {
-        let response = await fetch(`${BASE}/posts`,{
-            method: 'POST',
-            body: JSON.stringify({title, body, userid}),
-            headers: {'content-type': 'application/json'}
+        let response = await http.post('/posts', {
+           title, body, userid
         })
-        let json = await response.json()
-        return json
+        return response.data
+
     }
 }
