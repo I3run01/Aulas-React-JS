@@ -28,8 +28,29 @@ const App =() => {
     setAddBodyText(e.target.value)
   }
 
-  const handleAddClick = () => {
-    alert(addTitleText + ' - ' + addBodyText)
+  const handleAddClick = async () => {
+    if(addBodyText && addBodyText) {
+      let response = await fetch("https://jsonplaceholder.typicode.com/posts",{
+        method: 'POST',
+        body: JSON.stringify({
+          title: addBodyText,
+          body: addBodyText,
+          userID: 1
+        }),
+        headers: {
+          'content-type': 'application/json'
+        }
+      })
+
+      let json = await response.json()
+
+      if(json.id) {
+        alert('Post adicionado com sucesso')
+      } else {
+        alert('Ocorreu algum erro')
+      }
+
+    }
   }
 
  
