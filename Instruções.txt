@@ -43,6 +43,9 @@ Bibliotecas
 	
 	Instalar a Biclioteca Axios -> Para realizar requisições
 		npm install axios
+		
+		Documentação
+			https://axios-http.com/docs/intro
 
 
 
