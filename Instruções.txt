@@ -47,6 +47,9 @@ Bibliotecas
 		Documentação
 			https://axios-http.com/docs/intro
 
+	Biblioteca para gerar um id
+		npm install uuid -D @types/uuid
+
 
 
 
