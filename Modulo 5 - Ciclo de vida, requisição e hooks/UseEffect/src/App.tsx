@@ -7,8 +7,7 @@ const App =() => {
 
   useEffect(() => {
     setFullName(`${name} ${lastName}`)
-  }), [name, lastName]
-
+  }, [name, lastName])
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
     setName( e.target.value )
   }
