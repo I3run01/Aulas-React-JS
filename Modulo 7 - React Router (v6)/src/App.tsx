@@ -5,6 +5,7 @@ import { AboutBonieky } from "./pages/AboutBonieky"
 import { AboutPedro } from "./pages/AboutPedro" 
 import { AboutItem } from "./pages/AboutItem"
 import { NotFound } from "./pages/Notfound"
+import { RequireAuth } from "./RequireAuth"
 
 const App =() => {
   return (
@@ -18,7 +19,14 @@ const App =() => {
 
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/sobre" element={<About />}></Route>
+
+          /* O RequireAuth vai validar se o meu usuário poderá acessar o About */
+          <Route path="/sobre" element={
+            <RequireAuth>
+              <About/>
+            </RequireAuth>
+          }/>
+
           <Route path="/sobre/bonieky" element={<AboutBonieky />}></Route>
           <Route path="/sobre/pedro" element={<AboutPedro />}></Route>
           
