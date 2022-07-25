@@ -44,6 +44,18 @@ Deploy
 		No campo "Publish directory:"
 		Coloque: dist
 
+React Router (v6)
+	para instalar:
+		npm install react-router-dom
+
+	Em main.tsx: Faça a seguinte importação:
+		import { BrowserRouter } from "react-router-dom"
+
+	Substituia o "<App />" por :
+		<BrowserRouter>
+      			<App />
+    		</BrowserRouter>
+
 
 
 
