@@ -18,38 +18,31 @@ Bibliotecas
 	Baixe e instale a seguinte extensão para ter o auto-complete
 		vscode-styled-components
 
-	Instalar tailwind:
-		npm install -D tailwindcss postcss autoprefixer
-		npx tailwindcss init -p
+
+Deploy
+	Instale a seguinte biblioteca
+		npm install gh-pages --save-dev
+
+	Em "packge.json" -> "scripts". Colocar os seguintes comandos:
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
+
+	Rode o comando:
+		npm run deploy
 	
-		Configuração de Tailwind.config.js
-			module.exports = {
-  				content: [
-    					"./index.html",
-    					"./src/**/*.					{vue,js,ts,jsx,tsx}",
-  					],
-  				theme: {
-    				extend: {},
-  				},
-  				plugins: [],
-			}
-		Instale a extensão 
-			PostCSS Language Support
+	Mude o nome da pasta "dist" para "build"
+
+	Rode novamente o comando
+		npm run deploy
 	
-		Imports NI index.css
-			@tailwind base;
-			@tailwind components;
-			@tailwind utilities;
-	
-	Instalar a Biclioteca Axios -> Para realizar requisições
-		npm install axios
+	Depois rode o comando "npm run buld"
+
+	Utilize o site Netlify para hospedar
+		No campo "Build comand:"
+		Coloque: Build command
 		
-		Documentação
-			https://axios-http.com/docs/intro
-
-	Biblioteca para gerar um id
-		npm install uuid -D @types/uuid
-
+		No campo "Publish directory:"
+		Coloque: dist
 
 
 
