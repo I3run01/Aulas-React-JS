@@ -17,9 +17,6 @@ Bibliotecas
 
 	Baixe e instale a seguinte extensão para ter o auto-complete
 		vscode-styled-components
-	
-	Biblioteca Axios:
-		npm install axios
 
 
 Deploy
@@ -55,7 +52,9 @@ React Router (v6)
 		import { BrowserRouter } from "react-router-dom"
 
 	Substituia o "<App />" por :
-		<BrowserRouter><App /></BrowserRouter>
+		<BrowserRouter>
+      			<App />
+    		</BrowserRouter>
 
 
 
