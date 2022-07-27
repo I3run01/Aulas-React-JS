@@ -1,24 +1,17 @@
-import { MainRoutes } from "./routes/MainRoutes"
+import { Routes, Route } from "react-router-dom"
+import { ShowData } from "./pages/ShowData"
+import { SignUp } from "./pages/SignUp"
 
 const App =() => {
   return (
     <div>
-      
-      <header>
-        <h1>Titulo do site</h1>
-      </header>
-      
-      <br />
-      <div>
-        <MainRoutes/>
-      </div>
+      <h1>Titulo da página</h1>
+      <hr />
+      <Routes>
+        <Route path="/"  element={<SignUp/>} ></Route>
+        <Route path="/exibir"  element={<ShowData/>} ></Route>
+      </Routes>
 
-      <br />
-
-      <footer>
-        Todos os direitos reservados
-      </footer>
-     
     </div>
   )
 }
