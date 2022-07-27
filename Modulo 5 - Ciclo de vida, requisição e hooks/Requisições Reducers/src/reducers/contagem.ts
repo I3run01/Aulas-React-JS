@@ -1,6 +1,6 @@
 import { useReducer } from "react"
 
-type redecerState = {
+type reducerState = {
     count: number
 }
   
@@ -12,7 +12,7 @@ const initialState = {
     count: 0
 }
 
-const reducer = (state: redecerState, action: reducerAction) => {
+const reducer = (state: reducerState, action: reducerAction) => {
     switch(action.type) {
         case 'ADD':
             return{...state, count: state.count + 1}
