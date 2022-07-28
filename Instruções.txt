@@ -56,6 +56,22 @@ React Router (v6)
       			<App />
     		</BrowserRouter>
 
+Contaxt API com Reducer
+	Em main.tsx: Faça aS seguinteS importação:
+		import { BrowserRouter } from "react-router-dom"
+		import { ContextProvider } from './contexts/Context
+
+	Substituia o "<App />" por :
+		<ContextProvider>
+			<BrowserRouter>
+      				<App />
+    			</BrowserRouter>
+		</ContextProvider>
+
+Para usar o Redux:
+	npm install redux react-redux @reduxjs/toolkit
+	npm install -D @types/react-redux
+
 
 
 
