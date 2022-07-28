@@ -71,6 +71,19 @@ Contaxt API com Reducer
 Para usar o Redux:
 	npm install redux react-redux @reduxjs/toolkit
 	npm install -D @types/react-redux
+	
+	*Imports
+
+	import { Provider } from 'react-redux'
+	import {store} from './redux/store'
+	
+	//o store é um arquivo que se cria dentro da pasta redux
+
+	Em mains.ts -> Substituia o "<App />" por :
+		<Provider store={store} >
+        		<App />
+      		</Provider>
+
 
 
 
