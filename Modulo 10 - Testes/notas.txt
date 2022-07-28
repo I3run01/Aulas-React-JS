@@ -1,0 +1,7 @@
+Os 3 principais tipos de testea:
+
+    - Unit Test
+
+    - Integration Test
+
+    - E2E (End to end)
