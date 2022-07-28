@@ -5,3 +5,9 @@ Os 3 principais tipos de testea:
     - Integration Test
 
     - E2E (End to end)
+
+Prioridades na hora de fazer os testes:
+
+    1. As principais funcionalidades
+    2. Partes do sistema que tem maiores chances de quebrar
+    3.funcionalidades não tão importantes.
