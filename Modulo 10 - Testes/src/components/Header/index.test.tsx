@@ -1,16 +1,19 @@
-import { Header } from './index';
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { Header } from './index'
+import { render, screen } from '@testing-library/react'
+
+//Preciso importar essa biblioteca, pois tenho no meu header o elemento "link", que é um elemento de reac-router-dom
+import { MemoryRouter } from 'react-router-dom' 
+
 
 it('should have a "Cadastrar" button', () => {
     render(
-        <MemoryRouter>
-            <Header />
+        <MemoryRouter> //Se eu não não importar o memoryRouter, não precisa importar esse elemento
+            <Header></Header>
         </MemoryRouter>
-    );
+    )
 
-    let button = screen.getByText('Cadastrar');
-    expect(button).toBeInTheDocument();
-});
+    let button = screen.getByText('Cadastrar')
+    expect(button).toBeInTheDocument()
+})
 
-export {};
+export {}

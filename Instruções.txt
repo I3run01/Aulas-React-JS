@@ -87,6 +87,8 @@ Para usar o Redux:
 Biblioteca para testes:
 	Se criar em CRA, não precisa instalar nada, mas se criar em Vite, siga o seguint tutorial:
 		https://codingwithmanny.medium.com/quick-jest-setup-with-vitejs-react-typescript-82f325e4323f
+	Rodar Teste:
+		npm run test
 
 
 

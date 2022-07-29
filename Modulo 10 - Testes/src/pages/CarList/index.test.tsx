@@ -3,24 +3,31 @@ import { MemoryRouter } from 'react-router-dom';
 import { CarList } from './index';
 
 it('should have a list of cars', () => {
-    const { container } = render(
+    const {container} = render(
         <MemoryRouter>
-            <CarList />
+            <CarList/>
         </MemoryRouter>
-    );
-    const listEl = container.getElementsByClassName('list');
-    expect(listEl.length).toBeGreaterThan(0);
-});
+    )
+
+    const lisEl = container.getElementsByClassName('list')
+    expect(lisEl.length).toBeGreaterThan(0)
+})
 
 it('should have 5 cars in the list', () => {
-    const { container } = render(
+    const {container} = render(
         <MemoryRouter>
-            <CarList />
+            <CarList/>
         </MemoryRouter>
-    );
+    )
 
-    const carsList = container.getElementsByClassName('carItem');
-    expect(carsList.length).toEqual(5);
-});
+    const carList = container.getElementsByClassName('carItem')
+    expect(carList.length).toBe(5)
+    
+
+})
+
+
+
+
 
 export {};
