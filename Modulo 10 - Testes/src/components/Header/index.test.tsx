@@ -7,7 +7,7 @@ import { MemoryRouter } from 'react-router-dom'
 
 it('should have a "Cadastrar" button', () => {
     render(
-        <MemoryRouter> //Se eu não não importar o memoryRouter, não precisa importar esse elemento
+        <MemoryRouter> //Se eu não importar o memoryRouter, não precisa importar esse elemento
             <Header></Header>
         </MemoryRouter>
     )
