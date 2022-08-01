@@ -1,0 +1,5 @@
+- store = storage -> local a onde se armazena as coisas
+- provider -> a bolha em que a aplicação estará disponpivel 
+- reducers = slice -> as funções para realizar as ações
+- actions / dispatches -> ações que podemos fazer nossas mudanças
+- selectors
