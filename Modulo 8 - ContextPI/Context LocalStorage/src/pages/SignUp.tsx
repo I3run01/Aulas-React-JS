@@ -7,9 +7,7 @@ import { Context } from "../contexts/Context"
 export  const SignUp = () => {
     const {state, dispatch} = useContext(Context)
 
-    useEffect(() => {
-        localStorage.setItem('theme', state.theme.status as string)
-    })
+    
 
     const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         dispatch({
