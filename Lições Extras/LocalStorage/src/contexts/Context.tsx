@@ -33,7 +33,13 @@ const mainReducer = (state: initialStateType, action: reducerActionType) => ({
 })
 
 export const ContextProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
+    
     const [state, dispatch] = useReducer(mainReducer, initialState)
+
+    //coloque dentro do useEffect as função que queira guardar no localStorage
+    useEffect(() => {
+        localStorage.setItem('theme', state.theme.status as string)
+    })
 
     return (
         <Context.Provider value={{state, dispatch}} >

@@ -5,6 +5,8 @@ export type ThemeType = {
 }
 
 export const themeInitialState: ThemeType = {
+
+    //Concatenasse para poder usar o localStorage
     status: localStorage.getItem('theme') ? localStorage.getItem('theme') : 'white'
 }
 
