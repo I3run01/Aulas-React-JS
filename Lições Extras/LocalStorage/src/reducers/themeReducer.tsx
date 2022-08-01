@@ -1,9 +1,7 @@
-import { useEffect } from "react";
 import { reducerActionType } from "../types/reducerActionsType";
 
 export type ThemeType = {
-    status: string
-
+    status: string | null
 }
 
 export const themeInitialState: ThemeType = {

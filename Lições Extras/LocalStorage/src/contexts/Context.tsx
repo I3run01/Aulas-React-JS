@@ -35,10 +35,6 @@ const mainReducer = (state: initialStateType, action: reducerActionType) => ({
 export const ContextProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
     const [state, dispatch] = useReducer(mainReducer, initialState)
 
-    useEffect(() => {
-        localStorage.setItem('theme', state.theme.status)
-    })
-
     return (
         <Context.Provider value={{state, dispatch}} >
             {children}

@@ -1,10 +1,15 @@
 import React, { useContext } from "react"
 import { Link } from "react-router-dom"
+import { useEffect } from "react"
 
 import { Context } from "../contexts/Context"
 
 export  const SignUp = () => {
     const {state, dispatch} = useContext(Context)
+
+    useEffect(() => {
+        localStorage.setItem('theme', state.theme.status as string)
+    })
 
     const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         dispatch({

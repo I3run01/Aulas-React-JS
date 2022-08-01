@@ -7,9 +7,6 @@ import { Context } from "./contexts/Context"
 const App =() => {
   const {state, dispatch} = useContext(Context)
 
-  
-
-
   const handleSwitchTheme = () => {
     if(state.theme.status == 'light' ) {
       dispatch({
