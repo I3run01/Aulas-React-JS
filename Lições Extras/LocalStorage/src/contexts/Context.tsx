@@ -36,9 +36,6 @@ export const ContextProvider: React.FC<{children: React.ReactNode}> = ({children
     const [state, dispatch] = useReducer(mainReducer, initialState)
 
     useEffect(() => {
-        const localData = localStorage.getItem('theme')
-
-        localData ? localData : 
         localStorage.setItem('theme', state.theme.status)
     })
 
