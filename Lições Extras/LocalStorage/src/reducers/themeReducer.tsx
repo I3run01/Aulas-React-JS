@@ -1,12 +1,13 @@
+import { useEffect } from "react";
 import { reducerActionType } from "../types/reducerActionsType";
 
 export type ThemeType = {
-    status: 'dark' | 'light'
+    status: string
 
 }
 
 export const themeInitialState: ThemeType = {
-    status: 'light'
+    status: localStorage.getItem('theme') ? localStorage.getItem('theme') : 'white'
 }
 
 
