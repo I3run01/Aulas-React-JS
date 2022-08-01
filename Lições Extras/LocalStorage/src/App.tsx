@@ -7,9 +7,7 @@ import { Context } from "./contexts/Context"
 const App =() => {
   const {state, dispatch} = useContext(Context)
 
-  useEffect(() => {
-    localStorage.setItem('theme', state.theme.status)
-  })
+  
 
 
   const handleSwitchTheme = () => {
